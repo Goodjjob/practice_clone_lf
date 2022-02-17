@@ -1,0 +1,36 @@
+table {
+  border-bottom: 1px solid #ddd;
+  border-collapse: separate;
+  border-left-color: rgb(128, 128, 128);
+  border-right-color: rgb(128, 128, 128);
+  box-sizing: border-box;
+  display: table;
+  table-layout: auto;
+  text-align: left;
+  width: 745px;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+}
+
+th {
+  height: 18px;
+  padding: 9px 0 11px;
+  border-bottom: 1px solid #000;
+  font-weight: normal;
+  line-height: 18px;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+tr {
+  display: table-row;
+  vertical-align: middle;
+  border-color: rgb(128, 128, 128);
+  border-collapse: separate;
+  font-size: 12px;
+}

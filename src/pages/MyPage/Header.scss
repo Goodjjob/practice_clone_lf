@@ -1,0 +1,101 @@
+.header{
+  display: block;
+  position: relative;
+  width: 940px;
+}
+
+.myPageTitle{
+  display: block;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  width: 155px;
+  background-color: #212121;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.titleTypo {
+  font-size: 20px;
+  font-weight: normal;
+  color: #fff;
+}
+
+.summaryInfoBox{
+  border-top:2px solid #000;
+  border-bottom:1px solid #000;
+  box-sizing: border-box;
+  color: #212121;
+  display: block;
+  font-size: 12px;
+  height: 140px;
+  margin-left:195px;
+  padding: 25px 0px 0 5px;
+  text-align: left;
+}
+
+.userBox {
+  display: block;
+  margin-top: 10px;
+  max-width: 269px;
+  float: left;
+  font-size: 12px;
+  em {
+    height: 28px;
+    line-height: 28px;
+    font-style: normal;
+    font-size: 20px;
+    color: #212121;
+    letter-spacing: -1.1px;
+    margin-block-end: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+.infoList{
+  display: flex;
+  float: right;
+  flex-direction: row;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.gradeBagde{
+  background-color: #ed434c;
+  border-radius: 1px;
+  font-size: 12px;
+  background-image: url(//img.lfmall.co.kr/file/WAS/apps/2019/pfront/member/grade_bg.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+  height: 21px;
+  padding: 0 8px;
+  color: #fff;
+  letter-spacing: 0.2px;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+.myInfoLink{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-width: auto;
+  margin: 0 10px;
+  float: left;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: #000;
+  letter-spacing: -0.7px;
+  text-align: center;
+  line-height: 20px;
+  vertical-align: top;
+  list-style: none;
+  cursor: pointer;
+  line-height: 20px;
+  letter-spacing: -0.7px;
+}
