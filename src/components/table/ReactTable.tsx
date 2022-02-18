@@ -7,7 +7,8 @@ interface Props {
   defaultColumn?: object;
 }
 
-export default function ReactTable({ columns, data, defaultColumn }: Props): JSX.Element {
+export default function ReactTable(props: Props): JSX.Element {
+  const { columns, data } = props;
   const {
     getTableProps,
     getTableBodyProps,

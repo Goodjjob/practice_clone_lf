@@ -27,10 +27,16 @@ tbody {
   vertical-align: middle;
   border-color: inherit;
 }
-tr {
+.row {
   display: table-row;
   vertical-align: middle;
   border-color: rgb(128, 128, 128);
   border-collapse: separate;
   font-size: 12px;
+}
+
+.ReactCollapse--collapse {
+  max-width: 800px;
+  border-radius: 10px;
+  transition: height 500ms;
 }
