@@ -1,8 +1,8 @@
-import { Link } from ".";
+import { Menu } from ".";
 import "./Header.scss"
 
 
-const myInfoLinks: Link[] = [
+const myInfoLinks: Menu[] = [
   {
     id: 'review',
     url: 'myPage/getReviewList',
@@ -69,7 +69,7 @@ export default function Header(): JSX.Element {
         </div>
         <div className="infoList">
           {/* <MyInfoLinkCard/> */}
-          {myInfoLinks.map( (link: Link) => {
+          {myInfoLinks.map( (link: Menu) => {
             return (
               /*TODO: Route*/
               <li className="myInfoLink" key={link.id}>

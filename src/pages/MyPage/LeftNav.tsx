@@ -1,15 +1,38 @@
 import { ReactElement } from "react";
 import "./LeftNav.scss"
-import { Group, Link } from ".";
+import { MenuGroup, Menu } from ".";
+import { Link } from "react-router-dom";
 
-const navGroup: Group<Link>[] = [
+export default function LeftNav(): ReactElement {
+  return (
+    <div className="leftNav">
+      {navGroup.map( (group: MenuGroup<Menu>) => {
+        return (
+          <dl className="leftNavGroup">
+            <dt className="groupLabel" key={group.id}>{group.name}</dt>
+            {group.children.map( (menu: Menu) => {
+              return (
+                <dd className="navLabel" key={menu.id}>
+                  <Link to={menu.url}>{menu.id}</Link>
+                </dd>
+              )
+            })}
+          </dl>
+        )
+      })}
+    </div>
+  );
+}
+
+
+const navGroup: MenuGroup<Menu>[] = [
   {
     id: 'orderList',
     name: '쇼핑내역',
     children: [
       {
         id: '주문/배송 내역',
-        url: '',
+        url: '/orderHistory',
         component: [
           <div></div>
         ]
@@ -93,19 +116,3 @@ const navGroup: Group<Link>[] = [
     ]
   },
 ];
-export default function LeftNav(): ReactElement {
-  return (
-    <div className="leftNav">
-      {navGroup.map( (group: Group<Link>) => {
-        return (
-          <dl className="leftNavGroup">
-            <dt className="groupLabel" key={group.id}>{group.name}</dt>
-            {group.children.map( (link: Link) => {
-              return <dd className="navLabel" key={link.id}>{link.id}</dd>
-            })}
-          </dl>
-        )
-      })}
-    </div>
-  );
-}

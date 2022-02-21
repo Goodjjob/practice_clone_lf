@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes } from "react";
+import React, { ChangeEvent, InputHTMLAttributes } from "react";
 
 interface LabeledCheckBoxProps extends InputHTMLAttributes<HTMLElement> {
   labelClassName?: string;
@@ -16,18 +16,18 @@ export default function LabeledCheckBox(props: LabeledCheckBoxProps): JSX.Elemen
     onChange,
   } = props;
 
-  const handleChange = (e: any) => {
-    onChange(e.currentTarget.checked)
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    onChange(e.target.checked)
   };
 
   return (
-    <label className={labelClassName}>
-      {label}
+    <label className={labelClassName && labelClassName}>
+      {label && label}
     <input
-      className={inputClassName}
+      className={inputClassName && inputClassName}
       type="checkbox"
       checked={checked}
-      onChange={ (e) => handleChange(e)} />
+      onChange={(e) => handleChange(e)}/>
     </label>
   );
 };

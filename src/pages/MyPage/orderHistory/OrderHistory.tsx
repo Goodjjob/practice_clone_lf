@@ -86,7 +86,7 @@ export default function OrderHistory(): JSX.Element {
       <SomePartCollapseTable
         columns={columns}
         data={data}
-        isOpened={isOpened}
+        isOpened={isOpened2}
         collapseRowIndexStart={Math.floor(data.length*0.3)}
         collapseRowIndexEnd={Math.floor(data.length*0.6)}
         defaultColumn={defaultColumn}
