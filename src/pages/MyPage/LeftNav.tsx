@@ -25,7 +25,7 @@ export default function LeftNav(): ReactElement {
 }
 
 
-const navGroup: MenuGroup<Menu>[] = [
+export const navGroup: MenuGroup<Menu>[] = [
   {
     id: 'orderList',
     name: '쇼핑내역',

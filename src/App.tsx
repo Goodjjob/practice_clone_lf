@@ -1,12 +1,17 @@
-import React from 'react';
-import MyPage from './pages/MyPage/MyPage';
+import React, { useState } from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import TestReactQuery from './pages/TestReactQuery/TestReactQuery';
 
-function App() {
+const queryClient = new QueryClient();
+
+export default function App() {
   return (
-    <div className="App">
-      <MyPage/>
-    </div>
-  );
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false} />
+      <div className="App">
+        <TestReactQuery id={'1'}/>
+      </div>
+    </QueryClientProvider>
+  )
 }
-
-export default App;

@@ -1,4 +1,4 @@
-import { ChangeEventHandler, InputHTMLAttributes, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import "./OrderHistory.scss";
 import { ReactTable } from "../../../components/table";
 import makeData from "./makeData";

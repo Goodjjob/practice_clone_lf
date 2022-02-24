@@ -1,0 +1,21 @@
+.container{
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+.centerLayout{
+  display: block;
+}
+
+.parent{
+  border: 2px solid red;
+  padding: 20px;
+  display: block;
+}
+
+.child{
+  border: 2px solid black;
+  display: block;
+}
